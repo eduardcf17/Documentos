@@ -1,2 +1,6 @@
 select emple.apellido, dnombre from emple, depart where depart.dept_no=emple.dept_no;
 select emple.apellido, dnombre from emple, depart where depart.dept_no=emple.dept_no AND depart.loc='sevilla';
+prueba git abajo
+select emple.apellido, dnombre from emple, depart where depart.dept_no=emple.dept_no;
+select emple.apellido, dnombre from emple, depart where depart.dept_no=emple.dept_no AND depart.loc='sevilla';
+
