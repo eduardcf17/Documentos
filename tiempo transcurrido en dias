@@ -1,0 +1,4 @@
+tiempo transcurrido en dias
+
+select codigo,fecha_venta, timestampdiff(day,fecha_venta,now()) tiempo_transcurrido from producto order by fecha_venta desc;
+

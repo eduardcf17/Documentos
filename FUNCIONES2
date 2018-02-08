@@ -1,0 +1,7 @@
+1)select name, Population div SurfaceArea from country order by 2 desc;
+
+2)select name,IndepYear from country where mod(IndepYear,2)=0;
+3)mysql> select name,continent,truncate(LifeExpectancy,0) from country order by LifeExpectancy desc limit 5 ;
+4)
+5)select name from country where GNP>63 and GNP<=64;
+

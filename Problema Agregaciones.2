@@ -1,0 +1,26 @@
+● Calcula la máxima población para cada continente
+select sum(population),continent from country group by continent;
+
+● ¿Qué sucede si hago ‘SELECT Name, MAX(Population) from Country
+GROUP BY Continent’? 
+● Ordena de mayor a menor los continentes según la media de las esperanzas
+de vida de los países que los forman
+select sum(LifeExpectancy),continent from country group by 2;
+
+select avg(LifeExpectancy),continent from country group by continent order by 1 desc;
+● ¿Cuál es el continente con menor población?
+ 
+select sum(population), continent from country group by continent order by 1 limit 1;
+
+● ¿Cuál es la región de mayor población en Europa?
+mysql> select name from country where continent='Europe' order by population desc limit 1;
+
+select sum(region),continent from country where continent='Europe' group by 2 order by 1 desc;
+
+●Muestra todos los países sudamericanos que comparten la misma forma de
+gobierno
+mysql> select group_concat(name),GovernmentForm from country  where continent='South America' group by GovernmentForm ;
+
+5 formas de gobierno mas poblada
+mysql> select count(GovernmentForm),GovernmentForm from country group by 2 order by 1 desc;
+

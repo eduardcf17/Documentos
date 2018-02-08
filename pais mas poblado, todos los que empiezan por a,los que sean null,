@@ -1,0 +1,16 @@
+1)pais mas poblado estados unidos
+
+select name ,population from country where continent='North America' order by population desc limit 1;
+
+2)mostrar nombres paises que empizen por a
+
+select name from country where name like 'a%';
+
+3)mostrar mombre paises cuya capital es null
+
+select name from country where capital  is null;
+
+4)nombre de paises a partir del espcaio
+select name,substring(name,locate(' ',name))from country  where name like '% %';
+
+

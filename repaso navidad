@@ -1,0 +1,43 @@
+dia del mes en en day
+1)select char_length(nombre),curdate(),day(fecha_venta) from producto;
+dia de la semana
+1)select char_length(nombre),curdate(),date_format(fecha_venta,'%W') from producto;
+set lc_time_name='es_ES'; mostrar en esp
+2)select cantidad+precio,(cantidad+precio)/5,(cantidad+precio) mod 5 from producto;
+3)select upper(substring(nombre,2)) from producto ;
+4)select replace(descripcion,' ','')from producto;
+5)select codigo from producto where descuento is null;
+6)select date_format(now(),'%d de %M de %Y');
+
+
+
+
+Mostrar el nombre, la cantidad, el valor absoluto de cantidad (supondremos que
+puede ser negativa, indicando que falta producto), el precio, el valor inmediatamente
+superior de precio, el valor inmediatamente inferior, el descuento, el valor truncado
+de 'descuento' a un decimal y, por último, el valor de 'precio' multiplicado por
+'descuento' con la cabecera de "precio final".
+
+select nombre,cantidad,abs(cantidad),precio,floor(precio),ceil(precio),descuento,truncate(descuento,1),precio*descuento 'precio final' from producto;
+c)select codigo,nombre,descripcion, locate(' ',descripcion),year(fecha_venta),concat(precio,' euros')from producto;
+d)select codigo,descripcion,replace(descripcion,' ',''),substring(descripcion,locate(' ',descripcion)),fecha_venta+interval 100 day from producto;
+e)select codigo,fecha_venta, timestampdiff(day,fecha_venta,now()) tiempo_transcurrido from producto order by fecha_venta desc;
+f)select codigo, if ( codigo>4,date_format(fecha_venta,'%d-%c-%Y'),date_format(fecha_venta,'%Y-%M-%d-%a'))'fecha format' from producto;
+g)select codigo,descripcion from producto order by precio*descuento;
+
+
+Mostrar codigo y, si el codigo es mayor de 4, entonces mostrar fecha_venta en
+formato año-nombre_mes-d
+
+select codigo, if ( codigo>4,date_format(fecha_venta,'%d-%c-%Y'),''),date_format(fecha_venta,'%Y-%M-%d-%a'))'fecha format from producto;
+
+
+
+
+Mostrar codigo, fecha_venta, tiempo transcurrido en días desde fecha_venta hasta
+fecha actual que aparecerá como "tiempo transcurrido". Ordenar el resultado en
+función del tiempo transcurrido: de mayor a menor.
+
+select codigo,fecha_venta, timestampdiff(day,fecha_venta,now()) tiempo_transcurrido from producto order by fecha_venta desc;
+
+

@@ -1,0 +1,20 @@
+1)menor poblacion
+
+	select min(population) from country;
+
+2)suma poblacion africa
+
+	select sum(population) from country where continent='Africa';
+
+3)media pobla america norte
+
+	select avg(population) from country where continent='North America';
+
+4)nombre paises asia separados espacio
+
+	select  GROUP_CONCAT(name separator ' ') from country where continent='Asia';
+
+5)ordenado por nombre
+
+	select  GROUP_CONCAT(name order by name separator ' ') from country where continent='Asia';
+

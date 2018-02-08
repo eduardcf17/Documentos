@@ -1,0 +1,25 @@
+1) Muestra aquellas continentes cuya población supere los 1000000000
+habitantes.
+
+	select sum(population),continent from country  group by 2 having sum(population) > 1000000000 ;
+
+2) Agrupa las ciudades según el campo ‘CountryCode’ y muestra el CountryCode de aquellas agrupaciones cuya población media sea superior a 500000.
+
+	select group_concat(name),avg(population),CountryCode from city group by 3 having avg(population)>500000;
+
+3) Agrupa las ciudades según el campo ‘CountryCode’ y muestra la población media de aquellas agrupaciones cuyo CountryCode empieza por ‘A’ (utilizando HAVING)
+
+	select group_concat(name),avg(population),CountryCode from city group by 3 having countrycode like 'A%';
+
+4) Muestra aquellas regiones que contengan más de 10 países.
+
+	mysql> select region,count(name) from country group by 1 having count(name)>10;
+
+5) Muestra aquellas formas de gobierno que compartan más de 20 países
+
+	mysql> select GovernmentForm,count(name) from country group by 1 having count(name)>20;
+
+6) Muestra la población media de aquellos continentes que estén formados por más de 50 países. 
+
+	select avg(population),continent from country group by 2 having count(name)>50;
+

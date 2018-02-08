@@ -1,0 +1,5 @@
+select language, count(CountryCode) from countrylanguage group by 1 order by 2 desc limit 10;
+select countrycode,count(language)from countrylanguage group by 1 order by 2 desc limit 10;
+select countrycode,count(language)from countrylanguage where language like '%a%' group by 1 order by 2 desc limit 10;
+
+select count(CountryCode)from countrylanguage where language='Arabic' AND IsOfficial='T';

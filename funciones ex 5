@@ -1,0 +1,4 @@
+ejercicio 5 funciones
+select ifnull(capital,'sin capital')from country;
+select if(surfacearea>population,lower(name),upper(name))from country;
+

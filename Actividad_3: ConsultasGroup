@@ -1,0 +1,16 @@
+1) select count(*),dept_no from emple group by 2;
+2) select dept_no from emple group by 1 having count(*)>5;
+3)mysql> select avg(salario),dept_no from emple group by 2;
+4)Mostrar el nombre de los empleados vendedores del departamento número 30
+	mysql>  select group_concat(apellido) from emple where oficio='vendedor'group by dept_no having dept_no='30';
+5)select count(*) from emple where oficio='vendedor' group by dept_no having dept_no='30';
+6)mysql> select oficio from emple where dept_no='30' group by 1 ;
+7)select count(*) from emple where oficio='EMPLEADO' group by dept_no;
+8)select count(*),dept_no from emple group by dept_no order by 1 desc limit 1;
+9)select sum(salario),oficio from emple group by oficio;
+10)select sum(salario),oficio from emple where dept_no='30' group by oficio;
+11) select count(emp_no),dept_no from emple where oficio='Empleado' group by 2 order by 1 desc limit 4;
+12)select count(distinct oficio),dept_no from emple group by 2;
+13)select count(oficio),dept_no,oficio from emple group by 2,3 having count(*)>2;
+14)select group_concat(oficio order by salario desc),dept_no from emple group by 2 ;
+

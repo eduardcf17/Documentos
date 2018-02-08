@@ -1,0 +1,17 @@
+1) select apellido, oficio, dept_no from emple;
+2) select * from depart;
+3) select * from emple;
+4)select * from emple order by apellido;
+5)select * from emple order by dept_no desc;
+6)select * from emple order by dept_no desc, apellido asc;
+7)select * from emple where salario>2000;
+8)select * from emple where oficio='ANALISTA';
+9)select apellido,oficio from emple where dept_no=20;
+10)select * from emple where oficio='VENDEDOR' order by apellido;
+11)select * from emple where dept_no=10 and oficio='VENDEDOR' order by apellido;
+12)select * from emple where salario>2000 or dept_no=20;
+13)select * from emple order by oficio, apellido;
+14)select * from emple where salario BETWEEN 1000 AND 2000;
+15)select * from emple where salario>1000 AND oficio='vendedor';
+
+

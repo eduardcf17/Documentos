@@ -1,0 +1,23 @@
+FUNCIONES
+1)select char_LENGTH(Name) from country;
+2)select INSTR(Name,' ') from country;
+3)select STRCMP('Armenia',Name)from country where continent='Asia';
+SELECT'existe ',name from country where strcmp('armenia',name)=0;
+4)select concat (Name,' pertenece al continente ',continent) from country;
+5)SELECT UPPER(SUBSTRING(Name,1,3)) from country where continent='europe';
+6)select substring_index(name,' ',1),name from country;
+
+FUNCIONES 2
+1)select name from country where name like 'a%' and continent='europe';
+2)select name from country where name like '%h%' and continent='africa';
+3)select name from country where name like '%h%'and name like'%m%' and continent='africa';
+4)select name from country where name like'____r';
+
+con el espacio mas a la izquierda
+select name from country where name like '% %' order by instr(name,' ') limit 1;
+el nombre mas largo
+select name from country order by char_length(name) desc limit 1;
+El mas poblado
+select name from country order by population desc limit 1;
+
+
