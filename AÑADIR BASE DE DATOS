@@ -1,0 +1,2 @@
+create database jardineria;
+mysql -u root -paustria jardineria < '/home/cf17eduard.corral/Baixades/jardineria.sql' 
