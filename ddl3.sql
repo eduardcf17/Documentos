@@ -1,2 +1,11 @@
 create table GelderlandDist select name,District,CountryCode from city where District="Gelderland";
 create table GelderlandDist2 select name,District,CountryCode from city where District="Gelderland";
+DROP TABLE GelderlandDist2;
+ALTER TABLE GelderlandDist MODIFY COLUMN name char(20);
+ALTER TABLE GelderlandDist ADD COLUMN Inauguration date NOT NULL;
+ALTER TABLE GelderlandDist MODIFY COLUMN name varchar(20) primary key;
+create table  Big_Cities  select id, name, population from city  where population>8000000;
+ALTER TABLE Big_Cities  ADD COLUMN Founded date;
+ALTER TABLE Big_Cities  DROP COLUMN Founded ;
+ALTER TABLE Big_Cities MODIFY COLUMN id int (11);
+ALTER TABLE Big_Cities ADD primary key(id);
