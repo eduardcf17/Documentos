@@ -1,13 +1,12 @@
+use empresa;
 drop table contador;
-create table contador(DATOS VARCHAR (225));
+create table contador(numero int auto_increment primary key,tiempo timestamp);
 drop trigger contador;
-set @ex2=0;
 
 delimiter //
 create trigger contador after update on empresa.COMANDA
 		for each row 
         BEGIN
-        set @ex2=@ex2+1 ;
-        insert into contador(datos) values(concat(@ex2," ",curtime()));
+        insert into contador values(0,default);
         END;//
 delimiter ;
