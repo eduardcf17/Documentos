@@ -6,6 +6,7 @@ begin
     declare divisor int;
     declare res int;
     
+    -- declare exit handler for 1366
     set divisor=numero-1;
     
         label1:loop
