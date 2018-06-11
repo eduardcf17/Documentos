@@ -1,0 +1,1 @@
+select cognom from MALALT where inscripcio not in(select inscripcio from INGRESSOS);
