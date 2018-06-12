@@ -1,0 +1,4 @@
+select jugadores.nombre,jugadores.nombre like "%w%" from jugadores join equipos on Nombre_equipo=equipos.Nombre where Nombre_equipo="Wizards";
+delete from jugadores where Nombre_equipo=(select nombre from equipos where nombre ="Wizards") and jugadores.nombre=(select jugadores.nombre from jugadores join equipos on Nombre_equipo=equipos.Nombre where Nombre_equipo="Wizards" and jugadores.nombre like "%w%");
+
+delete from jugadores where jugadores.nombre=(select jugadores.nombre from jugadores join equipos on Nombre_equipo=equipos.Nombre where Nombre_equipo="Wizards" and jugadores.nombre like "%w%");
